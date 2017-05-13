@@ -58,7 +58,7 @@ $(".locate-brn").on("click",function initMap() {
 
         var uluru = {lat: -25.363, lng: 131.044};
         var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 4,
+          zoom: 13,
           center: uluru
         });
         var marker = new google.maps.Marker({
@@ -67,7 +67,51 @@ $(".locate-brn").on("click",function initMap() {
         });
 };
 
-  
+$(".locate-btn").click(function() {
+  var startPos;
+  var nudge = document.getElementById("nudge");
+
+  var showNudgeBanner = function() {
+    nudge.style.display = "block";
+  };
+
+  var hideNudgeBanner = function() {
+    nudge.style.display = "none";
+  };
+
+  var nudgeTimeoutId = setTimeout(showNudgeBanner, 5000);
+
+  var geoSuccess = function(position) {
+    hideNudgeBanner();
+    // We have the location, don't display banner
+    clearTimeout(nudgeTimeoutId);
+
+    // Do magic with location
+    startPos = position;
+    document.getElementById('startLat').innerHTML = startPos.coords.latitude;
+    document.getElementById('startLon').innerHTML = startPos.coords.longitude;
+  };
+  var geoError = function(error) {
+    switch(error.code) {
+      case error.TIMEOUT:
+        // The user didn't accept the callout
+        showNudgeBanner();
+        break;
+    }
+  };
+
+  navigator.geolocation.getCurrentPosition(geoSuccess, geoError);
+});
+
+window.onload = function() {
+  var startPos;
+  var geoSuccess = function(position) {
+    startPos = position;
+    document.getElementById('startLat').innerHTML = startPos.coords.latitude;
+    document.getElementById('startLon').innerHTML = startPos.coords.longitude;
+  };
+  navigator.geolocation.getCurrentPosition(geoSuccess);
+};
 
 
 
