@@ -63,11 +63,14 @@ body#bod {
 }
 
 div.body-container {
-
-	width: 90%;	
+	
+	width: 100%;
+	border-width: 12px;
+	border-style: solid;
+	border-color: #065D63;
 	background-color: #7A918D;
-	padding: 1% 0% 1% 0%;
-	border-radius: 15px;
+	padding: 2% 0% 2% 0%;
+
 	
 
 }
@@ -90,21 +93,21 @@ h3.under-text {
 	text-align: center;
 	font-family: helvetica;
 	color: #EFEBED;
-	margin: 2% 0% 2% 0%;
-	font-size: 2vw;
+	margin: 4% 0% 4% 0%;
+	font-size: 2.5vw;
 }
 
 img.temp-img {
 
-	margin: 0% 2% 0% 2%;
-	width: 96%;
-	border-radius: 10px;
+	margin: 0% 5% 0% 5%;
+	width: 90%;
+	border-radius: 14px;
 	border-style: solid;
 	border-width: 5px;
 	border-color: #89023E;
 }
 
-h2.button-instruction {
+.lrg-center-text {
 
 	text-align: center;
 	font-family: helvetica;
@@ -125,10 +128,33 @@ input.locate-btn {
 	font-family: helvetica;
 	font-size: 2vw;
 }
-3
+
+p.score-text {
+
+	color: #EFEBED;
+	font-family: helvetica;
+	text-align: center;
+	font-size: 8vw;
+}
 
 
 
+div.score-box {
+	background-color: #89023E;
+	border-style: solid;
+	border-width: 3px;
+	border-radius: 10px;
+	border-color: #FFFDF2;
+	width: 15%;
+	padding:2%;
+	margin: 1% 0% 1% 42.5%;
+}
+
+img.your-score-img {
+	
+	width: 40%;
+	margin: 7% 30% 2% 30%;
+}
 
 
 
