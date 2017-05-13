@@ -25,6 +25,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+	height: 100%;
 }
 ol, ul {
 	list-style: none;
@@ -65,7 +66,8 @@ body#bod {
 div.body-container {
 	
 	width: 100%;
-	border-width: 12px;
+	height: 100%;
+	border-width: 1vw;
 	border-style: solid;
 	border-color: #065D63;
 	background-color: #7A918D;
@@ -80,6 +82,20 @@ div.stripe {
 	margin: 4% 0% 1% 0%;
 	padding: 1.9%;
 	background-color: #89023E;
+}
+
+div.map-container {
+/* might not need this */
+}
+
+/* to make the map make it bigger */ 
+div.map-container.fullscreen {
+	z-index: 9999; 
+    width: 100%; 
+    height: 100%; 
+    position: fixed; 
+    top: 0; 
+    left: 0; 
 }
 
 img.title-img {
@@ -145,6 +161,7 @@ p.score-text {
 	font-family: helvetica;
 	text-align: center;
 	font-size: 8vw;
+	margin: 0% 2% 0% 2%
 }
 
 
@@ -155,9 +172,9 @@ div.score-box {
 	border-width: 3px;
 	border-radius: 10px;
 	border-color: #FFFDF2;
-	width: 15%;
+	width: 20%;
 	padding:2%;
-	margin: 1% 0% 1% 42.5%;
+	margin: 1% 0% 1% 40%;
 }
 
 img.your-score-img {
