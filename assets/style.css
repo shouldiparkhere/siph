@@ -85,7 +85,9 @@ div.stripe {
 }
 
 div.map-container {
-/* might not need this */
+
+	margin: 0% 5% 0% 5%;
+	border-radius: 17px;
 }
 
 /* to make the map make it bigger */ 
