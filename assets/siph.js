@@ -14,6 +14,7 @@ Put Your Changes Into Master Branch
 0) COMMIT ALL OF THE CHANGES ON YOUR LOCAL BRANCH
 1) git checkout master
 2) git merge bryan
+3) git thanks bryan for keeping your personal notes in
 */
 
 // Initialize Firebase
@@ -50,8 +51,11 @@ function runQuery() {
 
 runQuery();
 
+// going to have to create some type of if then statement
+// that will filter wether the user is trying to search or 
+// if its getting their current location
+$(".locate-brn").on("click",function initMap() {
 
-function initMap() {
         var uluru = {lat: -25.363, lng: 131.044};
         var map = new google.maps.Map(document.getElementById('map'), {
           zoom: 4,
@@ -61,7 +65,7 @@ function initMap() {
           position: uluru,
           map: map
         });
-      }
+};
 
   
 
@@ -75,6 +79,12 @@ function initMap() {
 var authKey2 = "";
 
 //global vars 
+
+
+/* UPDATE - maybe create a lightbox that has the user enter, then
+opens up to the initial page with just the map and the search field
+and the button to track location. then have another lightbox display
+the score and the recent crimes in the area */
 
 
 //load up function 
