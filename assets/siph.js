@@ -54,7 +54,8 @@ runQuery();
 // going to have to create some type of if then statement
 // that will filter wether the user is trying to search or 
 // if its getting their current location
-$(".locate-brn").on("click",function initMap() {
+
+function initMap() {
 
         var uluru = {lat: -25.363, lng: 131.044};
         var map = new google.maps.Map(document.getElementById('map'), {
