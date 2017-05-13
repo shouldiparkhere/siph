@@ -15,9 +15,19 @@
 //define var for 1st auth key for first API
 
 var authKey1 = "privatekeyforspotcrimepublicusers-commercialuse-877.410.1607";
-var baseUrl = "https://api.spotcrime.com/crimes.json?lat=40.3718&lon=-73.9959179&radius=0.08&callback=jQuery21306930704791620661_1494546905160&key=privatekeyforspotcrimepublicusers-commercialuse-877.410.1607&_=1494546905164"
+var baseUrl = "https://api.spotcrime.com/crimes.json?lat=39.9525838&lon=-75.165222&radius=0.08&callback=jQuery21306930704791620661_1494546905160&key=privatekeyforspotcrimepublicusers-commercialuse-877.410.1607&_=1494546905164"
 
-
+function initMap() {
+        var uluru = {lat: -25.363, lng: 131.044};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
 
 function runQuery() {
 
