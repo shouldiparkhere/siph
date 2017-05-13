@@ -26,9 +26,10 @@
 			<h3 class="under-text"> A better way to park. </h3>
 
 			<!-- INCLUDE A TAG THAT SHOWS THE USERS NAME -->
-			<div class="map-container">
+			<div class="map-container" id="map">
+
 				<!-- MAP STUFF WILL GO HERE -->
-				<img class="temp-img" src="assets/images/maps-screenshot.png">
+				<!-- <img class="temp-img" src="assets/images/maps-screenshot.png"> -->
 			</div><!-- END "map-container container" -->
 
 			<div class="container">
@@ -63,7 +64,10 @@
 		<script src="http://www.gstatic.com/firebasejs/3.3.2/firebase.js"></script>
 	
 		<!-- local script -->
-		<script type="text/javascript" src="assets/script.js"></script>
+		<script type="text/javascript" src="assets/siph.js"></script>
+
+		<script async defer
+	    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDSqVrrCzIDY3FydRzWwBVrTwFAXHo0imU&callback=initMap"></script>
 
 	</body>
  
