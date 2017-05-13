@@ -107,6 +107,16 @@ img.temp-img {
 	border-color: #89023E;
 }
 
+ #map {
+   width: 90%;
+   height: 400px;
+   background-color: grey;
+   align-content: middle;
+ }
+
+
+
+
 .lrg-center-text {
 
 	text-align: center;
