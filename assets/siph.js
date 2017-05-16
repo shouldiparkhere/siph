@@ -57,9 +57,11 @@ runQuery();
 
 function initMap() {
 
-        var uluru = {lat: -25.363, lng: 131.044};
+        var uluru = {lat: 40.7128, lng: -74.0059};
         var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 13,
+
+          zoom: 6,
+
           center: uluru
         });
         var marker = new google.maps.Marker({
@@ -139,4 +141,16 @@ the score and the recent crimes in the area */
 //locate me button onclick loads up to google map api location finder
 
 
+
+// ALGORITHM LIBRARIES:
+// algorithms in javascript - https://github.com/idosela/algorithms-in-javascript
+// computer science in javascript - https://github.com/nzakas/computer-science-in-javascript
+
+/* could potentially use the bubble sort method. if we grabbed the blocks and
+put them in arrays. the blocks with the higher array value will get sorted
+out of 100 other blocks. this is how we will arrive with a random score for
+the selected block we are in. divide the value by 10 to get a 1-10 score */
+
+// could be useful
+// https://mgechev.github.io/javascript-algorithms/searching_maximum-subarray-divide-and-conquer.js.html
 
