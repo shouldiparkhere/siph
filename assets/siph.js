@@ -254,6 +254,20 @@ var map, infoWindow;
 //global vars 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* UPDATE - maybe create a lightbox that has the user enter, then
 opens up to the initial page with just the map and the search field
 and the button to track location. then have another lightbox display
@@ -265,3 +279,30 @@ the score and the recent crimes in the area */
 //want our rating to be cleared out on load 
 
 //locate me button onclick loads up to google map api location finder
+
+
+
+// ALGORITHM LIBRARIES:
+// algorithms in javascript - https://github.com/idosela/algorithms-in-javascript
+// computer science in javascript - https://github.com/nzakas/computer-science-in-javascript
+
+/* could potentially use the bubble sort method. if we grabbed the blocks and
+put them in arrays. the blocks with the higher array value will get sorted
+out of 100 other blocks. this is how we will arrive with a random score for
+the selected block we are in. divide the value by 10 to get a 1-10 score */
+
+// could be useful
+// https://mgechev.github.io/javascript-algorithms/searching_maximum-subarray-divide-and-conquer.js.html
+
+
+
+
+
+
+
+
+
+
+
+
+
