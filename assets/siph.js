@@ -29,12 +29,15 @@ Put Your Changes Into Master Branch
 
 /*
 Syncing with the Master Branch
+
 0) COMMIT ALL OF THE CHANGES ON YOUR LOCAL BRANCH
 1) git checkout master
 2) git pull origin master
 3) git checkout MY_BRANCH
 4) git merge master
+
 Put Your Changes Into Master Branch
+
 0) COMMIT ALL OF THE CHANGES ON YOUR LOCAL BRANCH
 1) git checkout master
 2) git merge bryan
@@ -242,7 +245,64 @@ var map, infoWindow;
       }
 
 
+        var uluru = {lat: 40.7128, lng: -74.0059};
+        var map = new google.maps.Map(document.getElementById('map'), {
 
+          zoom: 6,
+
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+};
+
+$(".locate-btn").click(function() {
+  var startPos;
+  var nudge = document.getElementById("nudge");
+
+  var showNudgeBanner = function() {
+    nudge.style.display = "block";
+  };
+
+  var hideNudgeBanner = function() {
+    nudge.style.display = "none";
+  };
+
+  var nudgeTimeoutId = setTimeout(showNudgeBanner, 5000);
+
+  var geoSuccess = function(position) {
+    hideNudgeBanner();
+    // We have the location, don't display banner
+    clearTimeout(nudgeTimeoutId);
+
+    // Do magic with location
+    startPos = position;
+    document.getElementById('startLat').innerHTML = startPos.coords.latitude;
+    document.getElementById('startLon').innerHTML = startPos.coords.longitude;
+  };
+  var geoError = function(error) {
+    switch(error.code) {
+      case error.TIMEOUT:
+        // The user didn't accept the callout
+        showNudgeBanner();
+        break;
+    }
+  };
+
+  navigator.geolocation.getCurrentPosition(geoSuccess, geoError);
+});
+
+window.onload = function() {
+  var startPos;
+  var geoSuccess = function(position) {
+    startPos = position;
+    document.getElementById('startLat').innerHTML = startPos.coords.latitude;
+    document.getElementById('startLon').innerHTML = startPos.coords.longitude;
+  };
+  navigator.geolocation.getCurrentPosition(geoSuccess);
+};
 
 
 
@@ -266,4 +326,20 @@ the score and the recent crimes in the area */
 //want map to be zoomed out to a world view when page opens up 
 //want our rating to be cleared out on load 
 
+=======
 //locate me button onclick loads up to google map api location finder
+
+
+
+// ALGORITHM LIBRARIES:
+// algorithms in javascript - https://github.com/idosela/algorithms-in-javascript
+// computer science in javascript - https://github.com/nzakas/computer-science-in-javascript
+
+/* could potentially use the bubble sort method. if we grabbed the blocks and
+put them in arrays. the blocks with the higher array value will get sorted
+out of 100 other blocks. this is how we will arrive with a random score for
+the selected block we are in. divide the value by 10 to get a 1-10 score */
+
+// could be useful
+// https://mgechev.github.io/javascript-algorithms/searching_maximum-subarray-divide-and-conquer.js.html
+
