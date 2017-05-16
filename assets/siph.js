@@ -316,6 +316,20 @@ window.onload = function() {
 //global vars 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* UPDATE - maybe create a lightbox that has the user enter, then
 opens up to the initial page with just the map and the search field
 and the button to track location. then have another lightbox display
@@ -342,4 +356,15 @@ the selected block we are in. divide the value by 10 to get a 1-10 score */
 
 // could be useful
 // https://mgechev.github.io/javascript-algorithms/searching_maximum-subarray-divide-and-conquer.js.html
+
+
+
+
+
+
+
+
+
+
+
 
