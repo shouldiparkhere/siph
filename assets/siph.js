@@ -131,6 +131,14 @@ $(".locate-btn").click(function() {
   navigator.geolocation.getCurrentPosition(geoSuccess, geoError);
 });
 
+// ======== to hide and show the score section ======== //
+$("#score-container").hide();
+$("#locate").click(function(){
+    $("#score-container").toggle();
+});
+
+// ============================================= //
+
 window.onload = function() {
   var startPos;
   var geoSuccess = function(position) {
@@ -340,7 +348,6 @@ the score and the recent crimes in the area */
 //want map to be zoomed out to a world view when page opens up 
 //want our rating to be cleared out on load 
 
-=======
 //locate me button onclick loads up to google map api location finder
 
 

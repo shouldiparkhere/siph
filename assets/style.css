@@ -189,7 +189,13 @@ img.your-score-img {
 
 
 input.locate-field {
-
+	
+	border-radius: 6px;
+	margin:5px 0px 5px 15px;
+	width:95%;
+	padding: 5px;
+	font-family: helvetica;
+	font-style: italic;
 
 }
 
