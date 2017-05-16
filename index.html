@@ -17,7 +17,6 @@
 
 	<body id="bod">
 
-			
 		<div class="container body-container">
 			<div class="stripe">
 				<img class="title-img" src="assets/images/should-i-park-here-title-light.png">
@@ -25,11 +24,16 @@
 
 			<h3 class="under-text"> A better way to park. </h3>
 
+
+
 			<div class="map-container" id="map">
+			<input id="pac-input" class="controls" type="text" placeholder="Search Box">
+
 
 				<!-- MAP STUFF WILL GO HERE -->
 				<!-- <img class="temp-img" src="assets/images/maps-screenshot.png"> -->
 			</div><!-- END "map-container container" -->
+
 			
 			<!-- This is for the button -->
 			<div class="container">
@@ -81,8 +85,11 @@
 		<!-- local script -->
 		<script type="text/javascript" src="assets/siph.js"></script>
 
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD11-6X60We6Qf7EZFi6mw6DtZtgeiFMlA&libraries=places&callback=initAutocomplete"
+         async defer></script>
 		<script async defer
-	    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDSqVrrCzIDY3FydRzWwBVrTwFAXHo0imU&callback=initMap"></script>
+	    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD11-6X60We6Qf7EZFi6mw6DtZtgeiFMlA&callback=initMap"></script>
+
 
 	</body>
  
