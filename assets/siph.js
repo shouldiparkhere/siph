@@ -126,6 +126,14 @@ $(".locate-btn").click(function() {
   navigator.geolocation.getCurrentPosition(geoSuccess, geoError);
 });
 
+// ======== to hide and show the score section ======== //
+$("#score-container").hide();
+$("#locate").click(function(){
+    $("#score-container").toggle();
+});
+
+// ============================================= //
+
 window.onload = function() {
   var startPos;
   var geoSuccess = function(position) {
